@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Rolling a die</title>
+		<style>
+			*{font-size:50px;}
+			body{background-color:linen;}
+			img{width:300px;height:auto}
+			h1{background-color:black; color:white; width:70%; border-radius:40px:}
+			button{border: white; background-color:DarkSeaGreen; color:white; padding:20px; cursor:pointer;}
+		</style>
+	</head>
+	<body>
+		<center>
+			<h1> Rolling a die</h1>
+			<button onclick="roll()">Roll</button>
+			</br>
+			<img id="im1" src="d1.PNG"/>
+			<script>
+				function roll()
+				{
+					let im1=document.getElementById("im1");
+				//array of image names
+				let names=["d1.png","d2.png","d3.png","d4.png","d5.png","d6.png"];
+				//select random image
+				let r=parseInt(Math.random()*names.length);
+				//show the image
+				im1.src=names[r];
+				}
+			</script>
+		</center>
+	</body>
+</html>
